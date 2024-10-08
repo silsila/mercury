@@ -132,7 +132,14 @@ OLD_PASSWORD_FIELD_ENABLED = True  # use old password when password change in th
 
 CORS_ALLOW_ALL_ORIGINS = True
 
-MIDDLEWARE = ["django.middleware.security.SecurityMiddleware"]
+MIDDLEWARE = ["django.middleware.security.SecurityMiddleware",
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'allauth.account.middleware.AccountMiddleware',]
 if SERVE_STATIC:
     MIDDLEWARE += ["whitenoise.middleware.WhiteNoiseMiddleware"]
 
