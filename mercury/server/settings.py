@@ -173,6 +173,10 @@ TEMPLATES = [
     },
 ]
 
+import os
+print("Template Directories:")
+for template_dir in TEMPLATES[0]['DIRS']:
+    print(os.path.abspath(template_dir))
 WSGI_APPLICATION = "server.wsgi.application"
 
 
