@@ -24,7 +24,7 @@ from apps.accounts.views.apikey import (GetApiKey, RegenerateApiKey)
 
 router = DefaultRouter()
 router.register(r"api/v1/sites", SiteViewSet, basename="sites")
-router.register(r"api/v1/(?P<site_id>.+)/members", MembershipViewSet, basename="sites")
+router.register(r"api/v1/(?P<site_id>.+)/members", MembershipViewSet, basename="memberships")
 
 accounts_urlpatterns = router.urls
 
