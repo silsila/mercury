@@ -1,5 +1,5 @@
 django==4.2.7
-djangorestframework==3.14.0
+djangorestframework==5.1.0
 django-filter==21.1
 markdown==3.3.6
 celery>=5.1.2
